@@ -1,5 +1,157 @@
 /* Основные стили проекта. Это стили для темы, которую вы верстаете первой. */
 
 .page {
-  /* сохраните в разметке и стилях класс page. На его основе работает скрипт. */
+  font-family: "IBM Plex mono", sans-serif;
+  font-size: 18px;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+
+  background-image: url("../images/cover-image-dark.png");
+  background-color: var(--main-background-color);
 }
+
+.header {
+  display: grid;
+  height: 100vh;
+  grid-template-rows: repeat(3, 1fr);
+  grid-template-columns: repeat(4, 1fr);
+}
+
+.decorated-zone {
+  position: relative;
+  padding: var(--default-padding);
+}
+
+.decorated-zone::before {
+  position: absolute;
+  right: var(--default-padding);
+  top: var(--default-padding);
+  width: var(--decorative-corner-size);
+  height: var(--decorative-corner-size);
+  content: "";
+  border-right: solid 1px var(--button-color);
+  border-top: solid 1px var(--button-color);
+}
+
+.decorated-zone::after {
+  position: absolute;
+  left: var(--default-padding);
+  bottom: var(--default-padding);
+  width: var(--decorative-corner-size);
+  height: var(--decorative-corner-size);
+  content: "";
+  border-left: solid 1px var(--button-color);
+  border-bottom: solid 1px var(--button-color);
+}
+
+
+.header__record {
+  position: absolute;
+  display: flex;
+  align-items: center;
+  gap: 1px;
+  right: var(--default-padding);
+  top: var(--default-padding);
+}
+
+.header__record-text {
+  color: var(--color-accent);
+  text-align: center;
+  font-family: inherit;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 25px;
+  text-transform: uppercase;
+}
+
+.header__record-dot {
+  width: 9px;
+  height: 9px;
+  margin: 8px;
+  border-radius: 50%;
+  box-shadow: 0px 0px 4px var(--color-accent);
+  background-color: var(--color-accent);
+}
+
+.header__theme-menu {
+  justify-self: center;
+  grid-column-start: 1;
+  grid-column-end: span 4;
+}
+
+.header__theme-menu-list {
+  display: flex;
+  gap: 10px;
+}
+
+.header__theme-menu-item {
+}
+
+.header__theme-menu-button {
+  width: 70px;
+  height: 26px;
+  padding-inline: 13px;
+  border-radius: 0;
+
+  background-color: transparent;
+  border: none;
+  color: var(--button-color);
+
+  text-transform: lowercase;
+  font-family: inherit;
+}
+
+.header__theme-menu-button:hover {
+  border: 1px solid var(--button-hover-edge-color);
+}
+
+/* Active button style */
+.header__theme-menu-button.header__theme-menu-button_active {
+  pointer-events: none;
+  border: 1px solid var(--button-color);
+}
+
+h1 {
+  position: relative;
+  align-self: center;
+  left: -var(--default-padding);
+  grid-column-start: 1;
+  grid-column-end: span 4;
+}
+
+.title-decor {
+  color: var(--title-text-main-color);
+  text-shadow: 4px 4px 0px var(--title-text-shadow-color);
+  font-size: clamp(7.5rem, 0.5625rem + 14.4531vw, 9.8125rem);
+  font-style: normal;
+  font-weight: 700;
+  line-height: 82.5%;
+}
+
+h3 {
+  color: var(--subtitle-text-color);
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 23.4px;
+  background-color: var(--color-accent);
+}
+
+.header__subtitle {
+  grid-column-start: 3;
+  grid-column-end: span 2;
+  align-self: center;
+}
+
+.main__section {
+
+}
+
+.main__section-title {
+  
+}
+
+
