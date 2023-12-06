@@ -15,4 +15,6 @@
 
   --decorative-corner-size: 25px;
   --default-padding: 20px;
+  --main-block-margin: 60px;
+  --main-block-row-gap: 80px;
 }
